@@ -29,6 +29,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="L6h-Fa-6Q3" kind="show" id="HvI-fV-aDq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

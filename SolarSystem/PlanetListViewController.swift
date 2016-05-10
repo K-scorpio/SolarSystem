@@ -40,7 +40,7 @@ class PlanetListViewController: UITableViewController {
         let planet = PlanetController.planets[indexPath.row]
         
         cell.textLabel?.text = planet.name
-        cell.imageView?.image
+        cell.imageView?.image = UIImage(named: planet.imageName)
 
         // Configure the cell...
     
