@@ -9,18 +9,22 @@
 import UIKit
 
 class PlanetDetailViewController: UIViewController {
-
+    
+    
+    var planet: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        
+        
+        if let unwrappedPlanet = planet {
+            navigationItem.title = unwrappedPlanet
+            
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+}
 
     /*
     // MARK: - Navigation
@@ -32,4 +36,4 @@ class PlanetDetailViewController: UIViewController {
     }
     */
 
-}
+

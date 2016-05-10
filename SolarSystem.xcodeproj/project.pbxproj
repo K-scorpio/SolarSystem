@@ -19,6 +19,7 @@
 		68816AAE1BBB35EC000569CE /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68816AAA1BBB35E8000569CE /* Planet.swift */; };
 		E2F139FA1CE2811600B301B8 /* PlanetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F139F91CE2811600B301B8 /* PlanetTableViewController.swift */; };
 		E2F139FC1CE2850C00B301B8 /* PlanetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F139FB1CE2850C00B301B8 /* PlanetListViewController.swift */; };
+		E2F139FE1CE2A1B900B301B8 /* PlanetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F139FD1CE2A1B900B301B8 /* PlanetDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		68816AAA1BBB35E8000569CE /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		E2F139F91CE2811600B301B8 /* PlanetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetTableViewController.swift; sourceTree = "<group>"; };
 		E2F139FB1CE2850C00B301B8 /* PlanetListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetListViewController.swift; sourceTree = "<group>"; };
+		E2F139FD1CE2A1B900B301B8 /* PlanetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				68816A7F1BBB3591000569CE /* Main.storyboard */,
 				68816AA91BBB35E8000569CE /* PlanetController.swift */,
 				E2F139F91CE2811600B301B8 /* PlanetTableViewController.swift */,
+				E2F139FD1CE2A1B900B301B8 /* PlanetDetailViewController.swift */,
 				E2F139FB1CE2850C00B301B8 /* PlanetListViewController.swift */,
 				68816AAA1BBB35E8000569CE /* Planet.swift */,
 				68816A821BBB3591000569CE /* Assets.xcassets */,
@@ -270,6 +273,7 @@
 				68816AAB1BBB35E8000569CE /* PlanetController.swift in Sources */,
 				E2F139FA1CE2811600B301B8 /* PlanetTableViewController.swift in Sources */,
 				68816A7C1BBB3591000569CE /* AppDelegate.swift in Sources */,
+				E2F139FE1CE2A1B900B301B8 /* PlanetDetailViewController.swift in Sources */,
 				68816AAC1BBB35E8000569CE /* Planet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
