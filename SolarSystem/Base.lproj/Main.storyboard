@@ -30,7 +30,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="L6h-Fa-6Q3" kind="show" id="HvI-fV-aDq"/>
+                                    <segue destination="L6h-Fa-6Q3" kind="show" identifier="toPlanetDetail" id="Kib-Gy-7Ug"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -57,15 +57,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lq3-JZ-SAg">
-                                <rect key="frame" x="279" y="289" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wAx-Fk-oJ2">
+                                <rect key="frame" x="196" y="84" width="209" height="209"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="209" id="iSY-Yc-aH5"/>
+                                    <constraint firstAttribute="width" constant="209" id="ilQ-Ot-wu5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lq3-JZ-SAg">
+                                <rect key="frame" x="143" y="312" width="315" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYb-yB-Pdq">
+                                <rect key="frame" x="143" y="337" width="315" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8J-re-1cj">
+                                <rect key="frame" x="143" y="362" width="315" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lq3-JZ-SAg" firstAttribute="leading" secondItem="zYb-yB-Pdq" secondAttribute="leading" id="3v7-kA-kY0"/>
+                            <constraint firstItem="Lq3-JZ-SAg" firstAttribute="trailing" secondItem="zYb-yB-Pdq" secondAttribute="trailing" id="5HI-Bx-5AY"/>
+                            <constraint firstItem="e8J-re-1cj" firstAttribute="top" secondItem="wAx-Fk-oJ2" secondAttribute="bottom" constant="69" id="A3R-jn-jg9"/>
+                            <constraint firstItem="wAx-Fk-oJ2" firstAttribute="centerX" secondItem="zYb-yB-Pdq" secondAttribute="centerX" id="bpl-qe-eqg"/>
+                            <constraint firstItem="Lq3-JZ-SAg" firstAttribute="top" secondItem="wAx-Fk-oJ2" secondAttribute="bottom" constant="19" id="dbi-Cd-Pza"/>
+                            <constraint firstItem="zYb-yB-Pdq" firstAttribute="leading" secondItem="e8J-re-1cj" secondAttribute="leading" id="ghm-cy-anc"/>
+                            <constraint firstItem="zYb-yB-Pdq" firstAttribute="top" secondItem="Lq3-JZ-SAg" secondAttribute="bottom" constant="8" symbolic="YES" id="j1E-zt-SKF"/>
+                            <constraint firstItem="wAx-Fk-oJ2" firstAttribute="leading" secondItem="Lq3-JZ-SAg" secondAttribute="leading" constant="53" id="kJE-8l-HJm"/>
+                            <constraint firstItem="wAx-Fk-oJ2" firstAttribute="top" secondItem="dPr-fk-76g" secondAttribute="bottom" constant="20" id="q1C-mN-VFS"/>
+                            <constraint firstItem="wAx-Fk-oJ2" firstAttribute="centerX" secondItem="MFQ-9A-fkB" secondAttribute="centerX" id="qNl-ED-Krv"/>
+                            <constraint firstItem="wAx-Fk-oJ2" firstAttribute="trailing" secondItem="e8J-re-1cj" secondAttribute="trailing" constant="-53" id="vVx-g6-ktF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="planetDayLength" destination="e8J-re-1cj" id="Fpp-xn-oBJ"/>
+                        <outlet property="planetDiameter" destination="Lq3-JZ-SAg" id="UVO-2n-oxp"/>
+                        <outlet property="planetDistanceFromSun" destination="zYb-yB-Pdq" id="88z-9n-U7M"/>
+                        <outlet property="planetImageView" destination="wAx-Fk-oJ2" id="hRO-Vj-4gC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whR-Xw-Nun" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

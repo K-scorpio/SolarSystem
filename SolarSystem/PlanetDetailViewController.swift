@@ -10,20 +10,36 @@ import UIKit
 
 class PlanetDetailViewController: UIViewController {
     
+    @IBOutlet weak var planetImageView: UIImageView!
     
-    var planet: String?
+    @IBOutlet weak var planetDiameter: UILabel!
+    
+    @IBOutlet weak var planetDistanceFromSun: UILabel!
+    
+    @IBOutlet weak var planetDayLength: UILabel!
+    
+    
+    var planet: Planet?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         
-        
-        if let unwrappedPlanet = planet {
-            navigationItem.title = unwrappedPlanet
-            
+        if let planet = planet {
+            updatePlanetWith(planet)
         }
+
     }
+    
+    func updatePlanetWith(planet: Planet) {
+        title = planet.name
+        planetImageView.image = UIImage(named: planet.imageName)
+        planetDiameter.text = "The Diameter is \(planet.diameter)"
+        planetDistanceFromSun.text = "The distance from the Sun is \(planet.millionKMsFromSun) 10^6m"
+        planetDayLength.text = "It's day length is \(planet.dayLength) hours"
+    }
+
 }
 
     /*
